@@ -26,7 +26,7 @@
     <webjars-font-awesome.version>4.7.0</webjars-font-awesome.version>
 
     <jacoco.version>0.8.7</jacoco.version>
-    <nohttp-checkstyle.version>0.0.10</nohttp-checkstyle.version>
+    <nohttp-checkstyle.version>3.1.2</nohttp-checkstyle.version>
     <spring-format.version>0.0.31</spring-format.version>
 
   </properties>
