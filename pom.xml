@@ -392,5 +392,19 @@
       </build>
     </profile>
   </profiles>
+  <distributionManagement>
+      <repository>
+          <id>petclinic-release</id>
+          <name>petclinic-release</name>
+          <url>http://13.233.233.25:8081/repository/petclinic-release/</url>
+      </repository>
+      <snapshotRepository>
+          <id>petclinic-snapshot</id>
+          <name>petclinic-snapshot</name>
+          <url>http://13.233.233.25:8081/repository/petclinic-snapshot/</url>
+      </snapshotRepository>
+  </distributionManagement>
+  
+  
 
 </project>
