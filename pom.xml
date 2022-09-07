@@ -398,12 +398,12 @@
       <repository>
           <id>petclinic-release</id>
           <name>petclinic-release</name>
-          <url>https://13.233.233.25:8081/repository/petclinic-release/</url>
+          <url>http://13.233.233.25:8081/repository/petclinic-release/</url>
       </repository>
       <snapshotRepository>
           <id>petclinic-snapshot</id>
           <name>petclinic-snapshot</name>
-          <url>https://13.233.233.25:8081/repository/petclinic-snapshot/</url>
+          <url>http://13.233.233.25:8081/repository/petclinic-snapshot/</url>
       </snapshotRepository>
   </distributionManagement>
  
