@@ -1,11 +1,6 @@
-# Alpine Linux with OpenJDK JRE
-FROM openjdk:8-jre-alpine
-
+FROM openjdk:8-jdk-alpine
+# Environment Variable that defines the endpoint of sentiment-analysis python api.
+ENV SA_LOGIC_API_URL http://localhost:5000
+ADD ./target/spring-petclinic-2.7.0-SNAPSHOT.jar
 EXPOSE 8080
-
-# copy jar into image
-#COPY target/spring-petclinic-2.7.0.BUILD-SNAPSHOT.jar /usr/bin/spring-petclinic.jar
-COPY ./target/spring-petclinic-2.7.0-SNAPSHOT.jar /usr/bin/spring-petclinic.jar
-
-# run application with this command line 
-ENTRYPOINT ["java","-jar","/usr/bin/spring-petclinic.jar","--server.port=8080"]
+CMD ["java", "-jar", "spring-petclinic-2.7.0-SNAPSHOT.jar", "--sa.logic.api.url=${SA_LOGIC_API_URL}"]
