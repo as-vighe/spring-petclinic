@@ -4,7 +4,7 @@
   
   <groupId>org.springframework.samples</groupId>
   <artifactId>spring-petclinic</artifactId>
-  <version>2.7.0</version>
+  <version>2.7.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <parent>
@@ -132,9 +132,9 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
-        <configuration>
-           <skip>true</skip>
-        </configuration>                       
+        #<configuration>
+         #  <skip>true</skip>
+        #</configuration>                       
         <version>3.1.2</version>
         <dependencies>
           <dependency>
@@ -401,12 +401,12 @@
       <repository>
           <id>petclinic-release</id>
           <name>petclinic-release</name>
-          <url>http://15.207.107.87:8081/repository/petclinic-release/</url>
+          <url>http://13.235.19.196:8081/repository/petclinic-release/</url>
       </repository>
       <snapshotRepository>
           <id>petclinic-snapshot</id>
           <name>petclinic-snapshot</name>
-          <url>http://15.207.107.87:8081/repository/petclinic-snapshot/</url>
+          <url>http://13.235.19.196:8081/repository/petclinic-snapshot/</url>
       </snapshotRepository>
   </distributionManagement>
  
