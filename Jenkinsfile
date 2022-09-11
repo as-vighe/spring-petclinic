@@ -3,7 +3,6 @@ pipeline{
   stages{
     stage('Build'){
       steps{          
-                
         sh '''
         VERSION=`date "+%Y%m%d-%H%M%S"`
         mvn install -Dskiptest -Dcheckstyle.skip
