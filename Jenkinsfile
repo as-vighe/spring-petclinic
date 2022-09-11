@@ -6,11 +6,11 @@ pipeline{
         //build//
         sh 'mvn install -Dskiptest -Dcheckstyle.skip'
         //docker build//
-        sh 'docker build -t amruta1984/petclinic1 .'
+        sh 'docker build -t amruta1984/petclinic .'
         //docker run//
-        sh 'docker run -d -p 8081:8080 petclinic1'
+        sh 'docker run -d -p 8081:8080 petclinic'
         //docker push//
-        sh 'docker push amruta1984/petclinic1:v1'
+        sh 'docker push amruta1984/petclinic:v1'
       }
     }
   }
