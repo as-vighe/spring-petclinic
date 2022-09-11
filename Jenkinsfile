@@ -6,7 +6,7 @@ pipeline{
         sh '''
         VERSION=`date "+%Y%m%d-%H%M%S"`
         mvn install -Dskiptest -Dcheckstyle.skip
-        mvn deploy
+        mvn deploy -Dskiptest -Dcheckstyle.skip
         for image_id in `docker ps | grep "petclinic" | awk "{print $1}"`; do docker stop $image_id; done
         sleep 5
         cd /var/lib/jenkins/workspace/spring-petclinic && docker build -t amruta1984/petclinic:${VERSION} .
