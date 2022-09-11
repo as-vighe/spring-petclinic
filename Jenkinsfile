@@ -2,26 +2,8 @@ pipeline{
   agent any
   stages{
     stage('Build'){
-      steps{
-          sh 'mvn install '
-      }
-      post{
-        success{
-          echo 'Now Archieving artifacts....'
-          archiveArtifacts artifacts: '**/*.jar'
-        }
-      }
-    }
-      stage('Code Analysis'){
-        steps{
-            sh 'mvn -Dskiptest -Dcheckstyle.skip'
-        }
-        post{
-            success{
-                echo 'Analysis result'
-            }
-        }
-      }
+      steps{          
+        sh 'mvn install -Dskiptest -Dcheckstyle.skip'
         //docker build//
         sh 'docker build -t amruta1984/petclinic .'
         //docker run//
@@ -30,4 +12,5 @@ pipeline{
         sh 'docker push amruta1984/petclinic:v1'
       }
     } 
-    
+  }
+}
